@@ -1,0 +1,440 @@
+@import "tailwindcss";
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --radius-2xl: calc(var(--radius) + 8px);
+    --radius-3xl: calc(var(--radius) + 12px);
+    --radius-4xl: calc(var(--radius) + 16px);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-ring-offset-background: var(--background);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-gold: var(--gold);
+    --color-gold-soft: var(--gold-soft);
+    --color-wine: var(--wine);
+    --color-wine-deep: var(--wine-deep);
+    --font-display: "Bodoni Moda", serif;
+    --font-sans: "Manrope", sans-serif;
+}
+
+:root {
+    --radius: 0.25rem;
+    --background: oklch(0.095 0.028 5);
+    --foreground: oklch(0.93 0.035 74);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.129 0.042 264.695);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.129 0.042 264.695);
+    --primary: oklch(0.208 0.042 265.755);
+    --primary-foreground: oklch(0.984 0.003 247.858);
+    --secondary: oklch(0.968 0.007 247.896);
+    --secondary-foreground: oklch(0.208 0.042 265.755);
+    --muted: oklch(0.968 0.007 247.896);
+    --muted-foreground: oklch(0.554 0.046 257.417);
+    --accent: oklch(0.968 0.007 247.896);
+    --accent-foreground: oklch(0.208 0.042 265.755);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(0.984 0.003 247.858);
+    --border: oklch(0.929 0.013 255.508);
+    --input: oklch(0.929 0.013 255.508);
+    --ring: oklch(0.704 0.04 256.788);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --sidebar: oklch(0.984 0.003 247.858);
+    --sidebar-foreground: oklch(0.129 0.042 264.695);
+    --sidebar-primary: oklch(0.208 0.042 265.755);
+    --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+    --sidebar-accent: oklch(0.968 0.007 247.896);
+    --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+    --sidebar-border: oklch(0.929 0.013 255.508);
+    --sidebar-ring: oklch(0.704 0.04 256.788);
+    --gold: oklch(0.78 0.14 78);
+    --gold-soft: oklch(0.88 0.07 77);
+    --wine: oklch(0.32 0.13 9);
+    --wine-deep: oklch(0.14 0.055 8);
+}
+
+.dark {
+    --background: oklch(0.129 0.042 264.695);
+    --foreground: oklch(0.984 0.003 247.858);
+    --card: oklch(0.208 0.042 265.755);
+    --card-foreground: oklch(0.984 0.003 247.858);
+    --popover: oklch(0.208 0.042 265.755);
+    --popover-foreground: oklch(0.984 0.003 247.858);
+    --primary: oklch(0.929 0.013 255.508);
+    --primary-foreground: oklch(0.208 0.042 265.755);
+    --secondary: oklch(0.279 0.041 260.031);
+    --secondary-foreground: oklch(0.984 0.003 247.858);
+    --muted: oklch(0.279 0.041 260.031);
+    --muted-foreground: oklch(0.704 0.04 256.788);
+    --accent: oklch(0.279 0.041 260.031);
+    --accent-foreground: oklch(0.984 0.003 247.858);
+    --destructive: oklch(0.704 0.191 22.216);
+    --destructive-foreground: oklch(0.984 0.003 247.858);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.551 0.027 264.364);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --sidebar: oklch(0.208 0.042 265.755);
+    --sidebar-foreground: oklch(0.984 0.003 247.858);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+    --sidebar-accent: oklch(0.279 0.041 260.031);
+    --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+    * {
+        border-color: var(--color-border);
+    }
+
+    body {
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+        font-family: "Manrope", sans-serif;
+        overflow-x: hidden;
+    }
+}
+
+@utility nav-contact {
+    border-bottom: 1px solid color-mix(in oklab, var(--gold) 55%, transparent);
+    padding-bottom: 0.3rem;
+    transition: color 200ms ease, border-color 200ms ease;
+    &:hover {
+        color: var(--gold);
+        border-color: var(--gold);
+    }
+}
+
+@utility portfolio-stage {
+    position: relative;
+    height: 100svh;
+    min-height: 42rem;
+    overflow: hidden;
+    isolation: isolate;
+
+    background:
+        linear-gradient(
+            rgba(12, 0, 5, 0.35),
+            rgba(12, 0, 5, 0.35)
+        ),
+        url("/images/portfolio-bg.png") center / cover no-repeat;
+}
+
+@utility ambient-glow {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.22;
+    background-image: repeating-linear-gradient(115deg, transparent 0 4px, color-mix(in oklab, var(--gold) 7%, transparent) 5px 6px);
+}
+
+@utility section-kicker {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold-soft);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+@utility art-title {
+    position: absolute;
+    inset-inline: 0;
+    top: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: clamp(1rem, 4vw, 4rem);
+
+    background: linear-gradient(
+        180deg,
+        #f8e8c8 0%,
+        #d9b06a 45%,
+        #9a6935 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: "TANMONCHERI", "Bodoni Moda", serif;
+    font-size: clamp(6.5rem, 17vw, 18rem);
+    font-weight: 400;
+    line-height: 0.8;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    opacity: 0.72;
+}
+
+@utility feature-list {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    width: clamp(13rem, 22vw, 22rem);
+    transform: translateY(-50%);
+    display: grid;
+    gap: 1.4rem;
+}
+
+@utility feature-list-left { left: clamp(1.25rem, 5vw, 5rem); }
+@utility feature-list-right { right: clamp(1.25rem, 5vw, 5rem); }
+
+@utility feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gold-soft);
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(0.78rem, 1.05vw, 1.05rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+@utility feature-dot {
+    width: 0.48rem;
+    height: 0.48rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--gold);
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--gold-soft) 35%, transparent), 0 0 14px var(--gold);
+}
+
+@utility portrait-reveal {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: clamp(22rem, 38vw, 35rem);
+    aspect-ratio: 1212 / 1298;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@utility portrait-window {
+    position: absolute;
+    z-index: 1;
+    top: 51.6%;
+    left: 49.3%;
+    width: 35.6%;
+    height: 51.2%;
+    overflow: hidden;
+    border-radius: 42% 42% 20% 20%;
+    background: var(--wine-deep);
+    will-change: transform;
+}
+
+@utility portrait-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    filter: brightness(0.92) saturate(1.04);
+    will-change: filter;
+}
+
+@utility foundation-frame {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 1.5rem 2rem color-mix(in oklab, var(--background) 70%, transparent));
+    will-change: opacity, transform;
+}
+
+@utility art-caption {
+    position: absolute;
+    z-index: 4;
+    bottom: 5.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    color: var(--gold-soft);
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(1rem, 1.8vw, 1.6rem);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@utility gold-rule {
+    width: clamp(2rem, 5vw, 5rem);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+@utility portfolio-final {
+    position: absolute;
+    z-index: 5;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5rem 1.5rem 3.5rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2rem);
+}
+
+@utility final-kicker {
+    margin-bottom: 1.25rem;
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.portfolio-final h2 {
+    max-width: 58rem;
+    color: var(--gold-soft);
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(3.1rem, 8vw, 8rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+@utility final-rule {
+    width: min(15rem, 54vw);
+    height: 1px;
+    margin-block: 2rem;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    box-shadow: 0 0 10px var(--gold);
+}
+
+@utility final-copy {
+    max-width: 42rem;
+
+    color: #ffe7a3;
+
+    font-family: "Bodoni Moda", "DM Serif Text", serif;
+    font-size: clamp(1.4rem, 2vw, 1.9rem);
+    font-weight: 700;
+    line-height: 1.55;
+    text-align: center;
+
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.9),
+        0 0 14px rgba(255, 220, 130, 0.45);
+}
+
+@utility scroll-cue {
+    position: absolute;
+    z-index: 5;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--gold-soft);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+}
+
+.scroll-cue span {
+    width: 1px;
+    height: 1.8rem;
+    background: var(--gold);
+    animation: scroll-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+    0%, 100% { transform: scaleY(0.45); transform-origin: top; opacity: 0.45; }
+    50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+}
+
+@media (max-width: 767px) {
+    .art-title {
+        top: 12%;
+        padding-inline: 0.7rem;
+        font-size: clamp(5.7rem, 29vw, 9rem);
+    }
+
+    .feature-list {
+        top: auto;
+        bottom: 13%;
+        width: 46%;
+        transform: none;
+        gap: 0.75rem;
+    }
+
+    .feature-list-left { left: 1rem; }
+    .feature-list-right { right: 0.5rem; }
+    .feature-item { align-items: flex-start; font-size: 0.58rem; }
+    .feature-dot { width: 0.34rem; height: 0.34rem; margin-top: 0.15rem; }
+    .portrait-reveal { width: min(88vw, 24rem); }
+    .art-caption { bottom: 6%; }
+    .scroll-cue { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .scroll-cue span { animation: none; }
+}
