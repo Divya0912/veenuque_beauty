@@ -392,33 +392,33 @@ const certificationData = [
     {
         id: 7,
         image: "/images/Chertificate3.png",
-        title: "SIJIL PENYERTAAN",
-        subtitle:  "1 DAY SAREE PRE-PLEATING CLASS",
-        level: "2024",
+        title: "SIJIL TAMAT LATIHAN",
+        subtitle:  "KURSUS TERAPI BEKAM DI IGB",
+        level: "2025",
     },
 
     {
         id: 8,
         image: "/images/Chertificate4.png",
-        title: "CERTIFICATE OF COMPLETION",
-        subtitle: "MAKE UP & BEAUTY CARE",
-        level: "2023",
+        title: "SIJIL PENYERTAAN",
+        subtitle: "1 DAY SAREE PRE-PLEATING CLASS",
+        level: "2024",
     },
 
     {
         id: 9,
         image: "/images/Chertificate5.png",
-        title: "SIJIL PENYERTAAN",
-        subtitle: "BEAUTY & MAKEUP TRAINING",
-        level: "",
+        title: "CHERTIFICATE COMPLETION",
+        subtitle: "MAKE-UP AND BEAUTY CARE",
+        level: "2023",
     },
 
     {
         id: 10,
         image: "/images/Chertificate6.png",
         title: "CERTIFICATE OF COMPLETION",
-        subtitle: "MAKE UP & BEAUTY CARE",
-        level: "PROFESSIONAL BEAUTY TRAINING",
+        subtitle: "KURSUS FOOT AND SPA",
+        level: "2023",
     },
 ];
 
