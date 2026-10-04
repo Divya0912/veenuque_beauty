@@ -227,7 +227,12 @@ const makeupCategories = [
     {
         id: 2,
         name: "SIMPLE MAKEUP",
-        images: [],
+        images: [
+            "/images/Simple Make up.png",
+            "/images/Simple Make up3.png",
+            "/images/Simple Make Up1.png",
+            "/images/Simple Make Up2.png",
+        ],
         title: "EFFORTLESS BEAUTY, NATURALLY",
         description:
             "Simple and elegant makeup looks created to enhance your natural features with a polished finish.",
@@ -238,6 +243,7 @@ const makeupCategories = [
         name: "COLOURFUL MAKEUP",
         images: [
             "/images/colorful.png",
+            "/images/colorful1.png",
         ],
         title: "BOLD COLOUR, BEAUTIFUL EXPRESSION",
         description:
@@ -251,6 +257,7 @@ const makeupCategories = [
             "/images/sfx.png",
             "/images/sfx1.png",
             "/images/sfx2.png",
+            "/images/sfx3.png",
         ],
         title: "MAKEUP BEYOND IMAGINATION",
         description:
@@ -266,6 +273,26 @@ const makeupCategories = [
             "/images/Mehandi2.png",
             "/images/Mehandi3.png",
             "/images/Mehandi4.png",
+            "/images/Mehandi5.png",
+            "/images/Mehandi6.png",
+            "/images/Mehandi7.png",
+            "/images/Mehandi8.png",
+            "/images/Mehandi9.png",
+            "/images/Mehandi10.png",
+            "/images/Mehandi11.png",
+            "/images/Mehandi12.png",
+            "/images/Mehandi13.png",
+            "/images/Mehandi14.png",
+            "/images/Mehandi15.png",
+            "/images/Mehandi16.png",
+            "/images/Mehandi17.png",
+            "/images/Mehandi18.png",
+            "/images/Mehandi19.png",
+            "/images/Mehandi20.png",
+            "/images/Mehandi21.png",
+            "/images/Mehandi22.png",
+            "/images/Mehandi23.png",
+            "/images/Mehandi24.png",
         ],
         title: "INTRICATE HENNA, BEAUTIFUL TRADITION",
         description:
@@ -284,7 +311,9 @@ const makeupCategories = [
     {
         id: 7,
         name: "DINNER MAKEUP",
-        images: [],
+        images: [
+            "/images/dinner make up.png",
+        ],
         title: "ELEGANT EVENING GLAM",
         description:
             "Sophisticated makeup looks created for dinners, celebrations and special evening occasions.",
@@ -296,6 +325,7 @@ const makeupCategories = [
         images: [
             "/images/personal makeup.png",
             "/images/personal makeup1.png",
+            "/images/Personal  Make Up.png",
         ],
         title: "BEAUTY DESIGNED FOR YOU",
         description:
@@ -419,6 +449,14 @@ const certificationData = [
         title: "CERTIFICATE OF COMPLETION",
         subtitle: "KURSUS FOOT AND SPA",
         level: "2023",
+    },
+
+    {
+        id: 11,
+        image: "/images/certification7.png",
+        title: "CERTIFICATE",
+        subtitle: "NTW",
+        level: "",
     },
 ];
 
